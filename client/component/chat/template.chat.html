@@ -1,0 +1,15 @@
+<template name="chat">
+    <h2 class="head">Chat messages:</h2>
+    <form>
+        <input id="inputMessage" type="text"/>
+        <button id="submitButton" type="submit">Post message</button>
+    </form>
+    <ul class="messages">
+        {{#each messages}}
+            <li>
+                <span>{{text}}</span>
+
+            </li>
+        {{/each}}
+    </ul>
+</template>

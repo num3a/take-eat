@@ -1,0 +1,11 @@
+<head>
+  <title>take-eat-easy</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+  {{> loginButtons}}
+  {{#if currentUser}}
+  {{> chat}}
+  {{/if}}
+</body>
