@@ -1,11 +1,12 @@
 /**
  * Created by emmanuelernest on 26/12/14.
  */
-if (Meteor.isClient) {
     // TEMPLATE CHAT
+    Meteor.subscribe('lastMessages');
+
     Template.chat.helpers({
         messages: function(){
-            var messages = Messages.find({},{sort : {date: -1}});
+            var messages = Messages.find({},{sort : {date: -1}, limit : 30});
             return messages;
         }
     });
@@ -25,4 +26,4 @@ if (Meteor.isClient) {
             // document.getElementById('inputMessage').value = '';
         }
     });
-}
+
